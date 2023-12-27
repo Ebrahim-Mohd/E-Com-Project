@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import ProductDetails from '../components/ProductDetails'
 
 const Home = () => {
     const [products, setProducts] = useState(null)
@@ -16,7 +17,7 @@ const Home = () => {
     return (
         <div className="home">
             {products && products.map((product)=>(
-                <p key = {product._id}>{product.title}</p>
+                <ProductDetails key={product._id} product = {product}/>
             ))}
         </div>
     )
