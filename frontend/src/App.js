@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Navbar from './components/Navbar';
 import CategoryPage from './components/CategoryPage';
 import { useState, useEffect } from 'react';
+import OpenedProduct from './components/OpenedProduct';
 
 function App() {
   const [products, setProducts] = useState(null)
@@ -28,6 +29,9 @@ function App() {
           <Route
           path='/categories/:category'
           element={<CategoryPage products={products}/>}/>
+          <Route
+          path='/product/:title'
+          element={<OpenedProduct products={products}/>}/>
         </Routes>
       </BrowserRouter>
    
