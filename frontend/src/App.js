@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import CategoryPage from './components/CategoryPage';
 import { useState, useEffect } from 'react';
 import OpenedProduct from './components/OpenedProduct';
+import Cart from './components/Cart'
 
 function App() {
   const [products, setProducts] = useState(null)
+  const [cartItems, setCartItems] = useState([])
     useEffect(()=>{
         const fetchData = async()=>{
             const response = await fetch("http://localhost:4000/api/products")
@@ -31,7 +33,10 @@ function App() {
           element={<CategoryPage products={products}/>}/>
           <Route
           path='/product/:title'
-          element={<OpenedProduct products={products}/>}/>
+          element={<OpenedProduct products={products} cartItems={cartItems} setCartItems={setCartItems}/>}/>
+          <Route 
+          path='/cart'
+          element={<Cart cartItems={cartItems}/>}/>
         </Routes>
       </BrowserRouter>
    
