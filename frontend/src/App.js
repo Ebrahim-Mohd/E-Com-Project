@@ -8,7 +8,13 @@ import Cart from './components/Cart'
 
 function App() {
   const [products, setProducts] = useState(null)
-  const [cartItems, setCartItems] = useState([])
+  const initialCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  const [cartItems, setCartItems] = useState(initialCartItems);
+
+  // Update local storage whenever cartItems change
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
     useEffect(()=>{
         const fetchData = async()=>{
             const response = await fetch("http://localhost:4000/api/products")

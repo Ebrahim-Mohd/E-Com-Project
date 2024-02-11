@@ -31,6 +31,10 @@ const OpenedProduct= ({products, cartItems, setCartItems})=> {
         fetchData()
     }, [title])
 
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }, [cartItems]);
+
     console.log("Title from useParams:", title);
     console.log("Filtered Products:", filteredProducts);
 

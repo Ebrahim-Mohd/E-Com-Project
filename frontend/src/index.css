@@ -16,7 +16,7 @@ code {
 /* HOME PAGE */
 
 nav {
-  background-color: rgba(0,0,139,0.65);
+  background-color: rgb(72,72, 170);
   display:flex;
   justify-content: flex-end;
   box-shadow: 0px 0px 15px black;
@@ -25,7 +25,7 @@ nav {
 .nav-title {
   margin-right: auto;
   margin-left: 40px;
-  font-size: 60px;
+  font-size: 50px;
   color:#e0ffff;
 }
 .nav-links {
@@ -35,6 +35,7 @@ nav {
   margin-right: 25px;
   color:#e0ffff;
   font-weight: 600;
+  position:relative;
 }
 .nav-links>li {
   margin-right: 15px;
@@ -50,6 +51,7 @@ nav {
   text-decoration: none;
   color:inherit;
 }
+
 .cat-link:hover {
   cursor: pointer;
 }
@@ -72,7 +74,7 @@ nav {
   margin: 30px;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0,0,139,0.65);
+  background-color: rgb(72,72, 170);
   box-shadow: 0px 0px 15px black;
   overflow: hidden;
 }
@@ -114,13 +116,42 @@ nav {
   font-weight: bold;
 }
 
+ .sub-menu {
+  position:absolute;
+  top: 70%;
+  left:35%;
+  
+}
+
+.sub-link {
+  text-decoration: none;
+  color: inherit;
+}
+.sub-menu ul {
+  margin: 10px 0; 
+  background: rgb(72,72, 170);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 6px 15px -3px rgba(0, 0, 0, 0.6);
+  
+}
+
+.sub-menu li {
+  margin-bottom: 12px; 
+  font-size: 25px;
+}
+.sub-menu li:hover {
+  background-color: rgb(62,62, 180);
+}
+
+
 /* OPENED PRODUCT PAGE */
 
 .product-page{
   margin:50px auto;
   display:flex;
   justify-content: center;
-  background-color: rgba(0,0,139,0.65);
+  background-color: rgb(72,72, 170);
   max-width: 550px;
   box-shadow: 0px 0px 15px black;
   
@@ -174,7 +205,7 @@ nav {
   text-align: center;
   margin-top:50px;
   font-size:45px;
-  color:rgba(0,0,139,0.65);
+  color:rgb(72,72, 170);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 

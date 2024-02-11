@@ -4,8 +4,8 @@ import ProductDetails from "./ProductDetails"
 const Cart=({cartItems})=>{
     return (
         <div>
-            <h1 className="cart-title">Cart</h1>
-            {cartItems.length===0 ? (<p>Your Cart is empty.</p>) 
+            {cartItems.length!==0 && <h1 className="cart-title">Cart</h1>}
+            {cartItems.length===0 ? (<h1 className="cart-title">Your Cart is empty.</h1>) 
             : 
             (<div className="cart-page">
                 {cartItems.map(product=>(
