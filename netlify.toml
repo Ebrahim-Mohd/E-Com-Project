@@ -1,9 +1,1 @@
-[build]
-  command = "npm run build"
-  functions = "backend/functions"
 
-[context.production]
-  NODE_ENV = "production"
-
-[context.development]
-  NODE_ENV = "development"
